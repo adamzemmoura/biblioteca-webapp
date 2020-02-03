@@ -19,7 +19,6 @@ public class LibraryController {
     @RequestMapping("/")
     public String index(ModelMap modelMap) {
         List<Book> allBooks = bookRepository.getAllBooks();
-        System.out.println(allBooks.get(0).getTitle());
         modelMap.put("books", allBooks);
         return "index";
     }
